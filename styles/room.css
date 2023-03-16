@@ -1,0 +1,39 @@
+#room_container{
+    display: grid;
+    grid-template-columns: 200px 800px;
+  }
+  #participants_container{
+    border-right: #797a79;
+  }
+  .member_wrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .message_wrapper{
+    display: block;
+    background-color: #363739;
+    border-radius:10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .green_dot{
+    height: 10px;
+    width: 10px;
+    background-color: #2aca3e;
+    border-radius: 50%;
+  }
+  #messages{
+    height: 100vh;
+    overflow: auto;
+  }
+#form_container{
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+}
+#message_form input{
+    background-color: #3f434a;
+    padding: 20px;
+    color: #fff;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Room</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/room.css">
+  </head>
+  <body>
+	 <header id="nav">Mumble</header>
+	 <main id="room_container">
+	   <section id="participants_container">
+	     <div id="participants_header">
+	       <p>Room Members</p>
+	       <p>6</p>
+	     </div>
+	   </section>
+	   <section id="messages"></section>
+       <div id="form_container">
+        <form id="message_form">
+            <input type="text" name="message">
+        </form>
+       </div>
+	 </main>
+  </body>
+  <!-- <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script> -->
+  <script type="module" src="/js/room.js"></script>
+  <script src="/js/agora_rtm.js"></script>
+  
+</html>
