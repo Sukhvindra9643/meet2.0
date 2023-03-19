@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Room</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/room.css">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/room.css" />
   </head>
   <body>
-	 <header id="nav">Mumble</header>
-	 <main id="room_container">
-	   <section id="participants_container">
-	     <div id="participants_header">
-	       <p>Room Members</p>
-	       <p>6</p>
-	     </div>
-	   </section>
-	   <section id="messages"></section>
-       <div id="form_container">
-        <form id="message_form">
-            <input type="text" name="message">
-        </form>
-       </div>
-	 </main>
+    <header id="nav">
+      <div class="nav_list">
+        <!-- <button id="members_button">
+        <svg width="24" height="4" xmins="http://www.w3.org/2000/svg" fill-rule="#ede0e0"></svg>
+      </button> -->
+        <div>
+          <h3 id="logo">
+            <img src="./images/logo.jpeg" alt="site Logo" />
+            <p id="logo_heading">Mumble</p>
+          </h3>
+        </div>
+      </div>
+      <div class="nav_links">
+        <!-- <button id="chat_button">
+        <svg width="24" height="4" xmins="http://www.w3.org/2000/svg" fill-rule="#fff"></svg>
+      </button> -->
+        <a class="nav_link" href="/">
+          Lobby
+          <!-- <svg xmins="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0"></svg> -->
+        </a>
+        <a class="nav_link" id="create_room_btn" href="join.html">
+          Create Room
+          <!-- <svg xmins="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0"></svg> -->
+        </a>
+      </div>
+    </header>
+
+    <main id="container">
+      <div class="room_container">
+        <section id="members_container">
+          <div id="members_header">
+            <p>Participants</p>
+            <strong id="member_count">0</strong>
+          </div>
+          <section id="members" style="float: right"></section>
+        </section>
+
+        <section id="message_container">
+          <div id="messages"></div>
+          <div id="form_container">
+            <form id="message_form">
+              <input type="text" name="message" placeholder="Enter your message"/>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
   <!-- <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script> -->
   <script type="module" src="/js/room.js"></script>
   <script src="/js/agora_rtm.js"></script>
-  
 </html>
