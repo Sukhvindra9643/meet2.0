@@ -1,5 +1,28 @@
 let messageContainer = document.getElementById("messages");
 messageContainer.scrollTop = messageContainer.scrollHeight;
+
+let participants_section = document.getElementById('participants_section');
+let messages_section = document.getElementById('messages_section');
+let member_container_mobile = document.getElementById('members_container')
+let message_container_mobile = document.getElementById('message_container')
+
+participants_section.addEventListener('click',()=>{
+  message_container_mobile.classList.add('message_container_mobile')
+  member_container_mobile.classList.remove('members_wrapper')
+  member_container_mobile.classList.add('member_wrapper_mobile')
+})
+messages_section.addEventListener('click',()=>{
+  message_container_mobile.classList.remove('message_container_mobile')
+  member_container_mobile.classList.remove('member_wrapper_mobile')
+  member_container_mobile.classList.add('members_wrapper')
+})
+
+
+if(mobile){
+  
+  console.log(mobile)
+}
+
 import { APP_ID } from "./env.js";
 
 let appID = APP_ID;
@@ -64,6 +87,9 @@ let initiate = async () => {
       hour: "2-digit",
       minute: "2-digit",
     });
+    if(time.startsWith("0")){
+      time = time.substring(1);
+    }
     let messagesWrapper = document.getElementById("messages");
     console.log(sender)
     let messageItem = !sender ? 

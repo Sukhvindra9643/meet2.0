@@ -11,6 +11,9 @@ body {
   height: 100vh;
   overflow-y: hidden;
 }
+#container{
+  width: 100%;
+}
 #nav {
   width: 100%;
   background-color: #1a1a1a;
@@ -71,7 +74,7 @@ body {
     margin-left: 10px;
   }
   .nav_links {
-    margin-right: 0;
+    margin-right: 10px;
     gap: 6px;
   }
   #create_room_btn {
