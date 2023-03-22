@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Room</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/join.css">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/join.css" />
   </head>
   <body>
-	  <header id="nav">
+    <header id="nav">
       <div class="nav_list">
         <!-- <button id="members_button">
         <svg width="24" height="4" xmins="http://www.w3.org/2000/svg" fill-rule="#ede0e0"></svg>
@@ -35,40 +35,48 @@
         </a>
       </div>
     </header>
-	 <main id="join_container">
-	   <div id="form_container">
-            <div id="form_container_header">
-                <p>Join Room</p>
+    <main id="join_container">
+      <div id="form_container">
+        <div id="form_container_header">
+          <p>Join Room</p>
+        </div>
+        <form id="lobby_form">
+          <div class="form_field_wrapper">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Enter Your Name..."
+            />
+          </div>
+          <div class="form_field_wrapper">
+            <label for="room">Room Name</label>
+            <input
+              type="text"
+              id="room"
+              required
+              placeholder="Enter Room Name..."
+            />
+          </div>
+          <div class="form_field_wrapper">
+            <label>Select Avatar</label>
+            <div id="avatar_selection">
+              <img class="avatar_option" src="images/logo.jpeg" />
+              <img class="avatar_option" src="images/logo.jpeg" />
+              <img class="avatar_option" src="images/logo.jpeg" />
+              <img class="avatar_option" src="images/logo.jpeg" />
+              <img class="avatar_option" src="images/logo.jpeg" />
             </div>
-            <form id="lobby_form">
-                <div class="form_field_wrapper">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" required placeholder="Enter Your Name...">
-                </div>
-                <div class="form_field_wrapper">
-                    <label for="room">Room Name</label>
-                    <input type="text" id="room" required
-                    placeholder="Enter Room Name...">
-                </div>
-                <div class="form_field_wrapper">
-                  <label>Select Avatar</label>
-                  <div id="avatar_selection">
-                    <img class="avatar_option" src="images/logo.jpeg"/>
-                    <img class="avatar_option" src="images/logo.jpeg"/>
-                    <img class="avatar_option" src="images/logo.jpeg"/>
-                    <img class="avatar_option" src="images/logo.jpeg"/>
-                    <img class="avatar_option" src="images/logo.jpeg"/>
-                  </div>
-                </div>
+          </div>
 
-                <div class="form_field_wrapper">
-                    <button class="btn">Join</button>
-                </div>
-            </form>
-       </div>
-	 </main>
+          <div class="form_field_wrapper">
+            <button class="btn">Join</button>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
   <script type="module" src="/js/join.js"></script>
   <script src="/js/agora_rtm.js"></script>
-  
 </html>

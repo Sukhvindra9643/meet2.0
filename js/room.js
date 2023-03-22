@@ -18,11 +18,6 @@ messages_section.addEventListener('click',()=>{
 })
 
 
-if(mobile){
-  
-  console.log(mobile)
-}
-
 import { APP_ID } from "./env.js";
 
 let appID = APP_ID;
